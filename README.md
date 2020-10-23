@@ -13,6 +13,7 @@ FRONTEND
   - Spring Boot
   - Spring MVC
   - MySQL
+  - LXC containers 
 
  DEVOPS
    - Jenkins Groovy Script
