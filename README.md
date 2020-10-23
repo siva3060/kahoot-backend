@@ -15,6 +15,6 @@ FRONTEND
   - MySQL
 
  DEVOPS
-   - Jenkins
+   - Jenkins Groovy Script
    - Docker
    - Ansible
