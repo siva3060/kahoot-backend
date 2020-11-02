@@ -1,4 +1,0 @@
-
-@Resource
-public class GameResource{
-}
