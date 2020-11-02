@@ -16,11 +16,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequestMapping("/gamepin")
 public class GamePinController{
 
+	@Autowired
+	GameService gameService;
+
 @GetController
 public int generateRandomGamePin(){
 	int GamePin;
 	Random rd = new Random();
 	GamePin = rd.nextInt(9999);
+	gameService.createGame(GamePin);
 	return GamePin;	
 }
 
