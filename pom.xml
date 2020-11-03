@@ -8,6 +8,7 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.penchala.yegu</groupId>
 	<artifactId>kahoot-clone</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -27,7 +28,12 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.197</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -41,11 +47,13 @@
 		</dependency>
 	</dependencies>
 
+	<!-- We are plugging maven compiler plugin to the build phase  to compile source code -->
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 				<configuration>
 					<source>11</source>
 					<target>11</target>
@@ -53,5 +61,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

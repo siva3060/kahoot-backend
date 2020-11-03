@@ -1,4 +1,3 @@
-
 package com.penchala.yegu.kahootclone.controller;
 
 import com.penchala.yegu.kahootclone.service.GameService;
