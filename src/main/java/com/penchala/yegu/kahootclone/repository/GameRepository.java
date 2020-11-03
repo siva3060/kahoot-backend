@@ -1,4 +1,9 @@
+package com.penchala.yegu.kahootclone.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 
 @Repository
-public interface  GameResource extends JpaRepository<Int,Int>{
+public interface GameRepository extends JpaRepository<Integer,Integer> {
 }
