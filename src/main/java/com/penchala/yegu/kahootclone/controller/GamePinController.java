@@ -3,6 +3,7 @@ package com.penchala.yegu.kahootclone.controller;
 
 import com.penchala.yegu.kahootclone.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
