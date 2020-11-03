@@ -23,6 +23,7 @@ public class GamePinController{
 	@Autowired
 	GameService gameService;
 
+//Generate a new Gamepin
 @GetMapping
 public int generateRandomGamePin(){
 	int GamePin;
@@ -30,6 +31,13 @@ public int generateRandomGamePin(){
 	GamePin = rd.nextInt(9999);
 	gameService.createGame(GamePin);
 	return GamePin;	
+}
+
+
+// Does a Game exist with the given Game Pin
+@PostMapping
+public Boolean isGameExist(int gamePin){
+	return gameService.gameExist(gamePin);	
 }
 
 }
