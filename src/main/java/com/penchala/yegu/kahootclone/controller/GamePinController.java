@@ -1,10 +1,12 @@
 package com.penchala.yegu.kahootclone.controller;
 
 
+import com.penchala.yegu.kahootclone.model.Player;
 import com.penchala.yegu.kahootclone.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Random;
 
 /*
@@ -24,6 +26,8 @@ public class GamePinController{
 //Generate a new Gamepin
 	/*
 	* 	1. What if somehow it has generated a Gamepin value that is already existed in the database
+	*   2. Validation Library
+	*   3.
 	* */
 @GetMapping
 public int generateRandomGamePin(){
@@ -43,5 +47,8 @@ public String  isGameExist(@PathVariable String gamePin){
 	 }
 	 return "Game Doesn't exist";
 }
+
+
+
 
 }
