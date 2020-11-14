@@ -1,11 +1,9 @@
 package com.penchala.yegu.kahootclone.controller;
 
+
 import com.penchala.yegu.kahootclone.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Random;
 
@@ -24,6 +22,9 @@ public class GamePinController{
 	GameService gameService;
 
 //Generate a new Gamepin
+	/*
+	* 	1. What if somehow it has generated a Gamepin value that is already existed in the database
+	* */
 @GetMapping
 public int generateRandomGamePin(){
 	int GamePin;
@@ -33,11 +34,14 @@ public int generateRandomGamePin(){
 	return GamePin;	
 }
 
-
 // Does a Game exist with the given Game Pin
-@PostMapping
-public Boolean isGameExist(int gamePin){
-	return gameService.gameExist(gamePin);	
+@PostMapping("/{gamePin}")
+public String  isGameExist(@PathVariable String gamePin){
+	 int pin = Integer.parseInt(gamePin);
+	 if(gameService.gameExist(pin)){
+	 	return "A Game with this pin exist";
+	 }
+	 return "Game Doesn't exist";
 }
 
 }
