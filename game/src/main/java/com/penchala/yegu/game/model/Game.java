@@ -1,4 +1,4 @@
-package com.penchala.yegu.game.model.Game;
+package com.penchala.yegu.game.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,4 +14,5 @@ public class Game {
     private Integer gamePin;
     private Integer userId;
     private Date    createdDate;
+    private Lobby gameLobby;
 }
