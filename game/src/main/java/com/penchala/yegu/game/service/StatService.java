@@ -2,9 +2,11 @@ package com.penchala.yegu.game.service;
 
 import com.penchala.yegu.game.model.PlayStat;
 import com.penchala.yegu.game.model.ScoreBoard.ScoreBoard;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+@Service
 public class StatService {
 
     private List<ScoreBoard> scoreBoardList = new ArrayList<>();

@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/quiz")
+@RequestMapping("/play")
 public class PlayController{
 
     @Autowired
     PlayService playService;
 
     //Gets a single question for test purpose
-    @GetMapping("/play")
+    @GetMapping("/test")
     public Play getOnePlay(){
         return playService.getOnePlay();
     }
